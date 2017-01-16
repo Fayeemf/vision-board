@@ -1,0 +1,319 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+/*heading bar*/
+body {
+  background: beige;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: darkorange;
+  color: black;
+  height: 60px;
+  width: 100%;
+}
+
+.bar {
+  height: 100%;
+}
+
+.bar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+
+#will {
+  /*left: 5px;*/
+  position: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  text-align: center;
+}
+
+#will > p {
+  font-family: "Fjalla One";
+}
+
+#will > p:first-child {
+  text-transform: uppercase;
+}
+
+#name {
+  display: none;
+}
+
+.links img {
+  width: 30px;
+  display: inline-block;
+  /*position: absolute;*/
+  top: 12px;
+  left: 29%;
+}
+
+.box img, .end img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+.links p {
+  display: block;
+  margin-bottom: 2px;
+  text-align: center;
+  left: 44%;
+}
+
+.links {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1em;
+}
+
+.links li {
+  position: relative;
+  display: inline-block;
+  padding-top: 4px;
+  width: 20%;
+  text-align: center;
+  min-width: 82px;
+}
+
+.links li:hover {
+  background: dodgerblue;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/*main part*/
+.wrapper {
+  margin-top: 80px;
+}
+
+.box {
+  background-color: whitesmoke;
+  border: 2px solid darkgray;
+  margin: 20px;
+  margin-top: 0;
+  padding: 10px;
+  box-shadow: 3px 3px 4px black;
+}
+
+h2.box {
+  background: deepskyblue;
+  margin-bottom: 0;
+}
+
+.category {
+  margin-bottom: 20px;
+}
+
+.category > h3 {
+  text-transform: uppercase;
+}
+
+.description {
+  border: 1px solid darkgray;
+  margin: 15px 0;
+  padding: 10px;
+}
+
+.description p {
+  margin: 0.5em 0;
+}
+
+/*footer section*/
+footer {
+  height: 40px;
+  background: dimgray;
+  color: gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  text-shadow: 1px 1px 1px black;
+}
+
+footer p:first-child {
+  display: block;
+  font-family: "Fjalla One";
+}
+
+footer p:last-child {
+  font-family: "Roboto";
+  font-size: 0.8em;
+  text-align: center;
+}
+
+footer img {
+  position: relative;
+  top: 4px;
+}
+
+@media (min-width: 769px) and (max-width: 990px) {
+  .links p,
+  .links img {
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+  }
+  .links img {
+    position: absolute;
+    left: 5px;
+    /*left: 18px;*/
+  }
+
+  .links p {
+    top: 15px;
+    left: 45px;
+    /*top: 18px;*/
+    /*right: 45px;*/
+  }
+
+  .links span {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+  }
+
+  .category {
+    overflow: auto;
+    display: inline-block;
+    width: 100%;
+  }
+
+/*How do I set a centered two-column box?*/
+  .categ-box {
+    text-align: center;
+  }
+  .description {
+    text-align: left;
+    /*float: left;*/
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    min-height: 150px;
+    max-height: 235px;
+    margin: 10px 10px;
+  }
+
+}
+
+@media (min-width: 991px) {
+  header {
+    width: 80px;
+    height: 100%;
+  }
+
+  #will {
+    display: none;
+  }
+
+  .links {
+    display: block;
+    width: 100%;
+  }
+  .links ul {
+    position: static;
+    /*float: left;*/
+    /*overflow: auto;*/
+  }
+
+  .links li {
+    position: static;
+    display: block;
+    float: left;
+    clear: left;
+    min-width: 80px;
+    height: 70px;
+    padding-top: 10px;
+  }
+
+  .links img {
+    top: 0;
+    left: 0;
+  }
+
+  .wrapper {
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+
+  .goals {
+    /*overflow: hidden;*/
+    text-align: center;
+  }
+
+  .category {
+    width: 30%;
+    vertical-align: top;
+    display: inline-block;
+    /*float: left;*/
+    text-align: left;
+    margin: 0 10px;
+  }
+
+  .category:nth-child(2n) {
+    margin: 0 1.7%;
+  }
+
+  .category > h3 {
+    margin: 0px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 44px;
+  }
+
+  .description:first-child {
+    margin-top: 0;
+  }
+
+  .shell:not(:last-child) {
+    width: 50%;
+    float: left;
+  }
+
+  .shell:last-child {
+    clear: left;
+  }
+
+  footer {
+    /*transform: rotate(90deg);*/
+    position: relative;
+    display: block;
+  }
+
+  .end p {
+    position: absolute;
+  }
+
+  .end p:first-child {
+    bottom: 10px;
+    left: 15px;
+  }
+
+  .end p:last-child {
+    bottom: 10px;
+    right: 15px;
+  }
+}
